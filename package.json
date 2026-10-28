@@ -1,0 +1,15 @@
+{
+  "name": "fsm-af-dashboard",
+  "version": "1.0.0",
+  "description": "Static, self-contained demo dashboard hosted on GitHub Pages.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node tests/test-bundle-runtime.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
