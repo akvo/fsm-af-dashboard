@@ -98,7 +98,11 @@ for (const cls of requiredClasses) {
   assert(template.includes(cls), `Missing responsive class: ${cls}`);
 }
 
-// 7. Verify no fixed widths > 320px (excluding max-width / min-width)
+// 7. Verify equal height cards and stretch alignment
+assert(template.includes('align-items: stretch'), 'Equal height alignment missing on cards-grid');
+assert(template.includes('height: 100%'), 'height: 100% missing on activity-card');
+
+// 8. Verify no fixed widths > 320px (excluding max-width / min-width)
 const fixedWidthMatches = template.matchAll(/(?<!max-)(?<!min-)width\s*:\s*(\d+)px/g);
 for (const match of fixedWidthMatches) {
   const widthVal = parseInt(match[1], 10);
