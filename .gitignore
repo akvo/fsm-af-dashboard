@@ -1,0 +1,12 @@
+.agent/
+agent_docs/
+.claude/
+.mcp.json
+task.md
+.env
+.env.*
+node_modules/
+test-results/
+playwright-report/
+.strix/
+*.log
