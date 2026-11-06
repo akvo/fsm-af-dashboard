@@ -150,6 +150,10 @@ assert(template.includes('@media (max-width: 960px)'), '960px media query missin
 assert(template.includes('@media (max-width: 680px)'), '680px media query missing');
 assert(template.includes('@media (max-width: 420px)'), '420px media query missing');
 
+// The loader replaces the root <head> with the template's, so title and favicon must be in the template too
+assert(/<title>Enhancing the Climate Resilience[^<]*<\/title>/.test(template), 'Template <title> missing (tab would show the URL)');
+assert(template.includes('<link rel="icon" href="favicon.ico"') && fs.existsSync('favicon.ico'), 'Favicon missing');
+
 // A literal src="{{ ... }}" makes the browser request the placeholder before render; use sc-camel-src
 assert(!/<img[^>]*\ssrc="\{\{/.test(template), 'Templated <img src="{{...}}"> found; use sc-camel-src');
 assert(template.includes('sc-camel-src="{{ p.thumb }}"') && template.includes('loading="lazy"'), 'Lazy photo thumbnails missing');
