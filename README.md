@@ -9,8 +9,11 @@ Static, self-contained demo dashboard hosted on GitHub Pages.
 ## Deployment
 
 - Single static HTML page served as `index.html`.
-- No backend, database, build process, framework, or external asset folder required.
-- All CSS, JavaScript, fonts, and images are embedded in the HTML.
+- No backend, database, build process or framework required.
+- All CSS, JavaScript, fonts, map data and logos are embedded in the HTML.
+- Output photos live in `photos/` as compressed WebP: a 640px thumbnail
+  (`*-640.webp`) shown in each output's details, and a 1200px version that
+  opens on click. They load only when a viewer opens an output's details.
 - `CNAME` binds the custom domain `fsm-afproject.akvo.org`.
 
 ## DNS
