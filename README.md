@@ -4,19 +4,19 @@ Static, self-contained demo dashboard hosted on GitHub Pages.
 
 ## Live URL
 
-- https://fsm-af.akvotest.org/
+- https://fsm-afproject.akvo.org/
 
 ## Deployment
 
 - Single static HTML page served as `index.html`.
 - No backend, database, build process, framework, or external asset folder required.
 - All CSS, JavaScript, fonts, and images are embedded in the HTML.
-- `CNAME` binds the custom domain `fsm-af.akvotest.org`.
+- `CNAME` binds the custom domain `fsm-afproject.akvo.org`.
 
 ## DNS
 
-- `fsm-af.akvotest.org` → `akvo.github.io` (CNAME, TTL 300), managed in
-  `akvo/akvo-config` under `dns/zones/akvotest-org.txt` (Terraform GitOps,
+- `fsm-afproject.akvo.org` → `akvo.github.io` (CNAME, TTL 300), managed in
+  `akvo/akvo-config` under `dns/zones/akvo-org.txt` (Terraform GitOps,
   "DNS CI" workflow).
 
 ## Notes
